@@ -1,12 +1,57 @@
-# React + Vite
+# HR_MANAGEMENT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HR Cloud is a responsive front-end web application for managing HR operations, built with React and Tailwind CSS. It helps streamline employee onboarding, attendance tracking, payroll management, and more.
 
-Currently, two official plugins are available:
+## 🚀 Live Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> (You can add a link here after deploying on Vercel, Netlify, or GitHub Pages)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 GitHub Repository
+
+🔗 [https://github.com/Shivam1tripathi/HR_MANAGEMENT.git](https://github.com/Shivam1tripathi/HR_MANAGEMENT.git)
+
+---
+
+## 🛠️ Features
+
+- Responsive design (Desktop, Tablet, Mobile)
+- React Router DOM routing
+- Tailwind CSS styling
+- Reusable components
+- Smooth animations & transitions
+- Clean folder structure
+
+---
+
+## 🧾 Pages / Routes
+
+| Route       | Description                                      |
+| ----------- | ------------------------------------------------ |
+| `/`         | Home page with intro, hero section, features     |
+| `/services` | Lists key HR services like payroll, leave, etc.  |
+| `/about`    | About us: mission, vision, values, team info     |
+| `/contact`  | Contact form with embedded info and social links |
+
+---
+
+## 📥 How to Clone and Run Locally
+
+1. **Clone the repository**
+
+git clone https://github.com/Shivam1tripathi/HR_MANAGEMENT.git
+
+cd HR_MANAGEMENT/Frontend
+
+## Install dependencies
+
+NPM I
+
+## Start the development server
+
+npm run dev
+
+## Open your browser and go to:
+
+http://localhost:5173
