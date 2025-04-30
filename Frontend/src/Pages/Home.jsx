@@ -1,6 +1,30 @@
 import ServiceCard from "../Components/ServiceCard";
+import TestimonialCard from "../Components/TestimonialCard";
 
 function Home() {
+  const testimonials = [
+    {
+      name: "John Doe",
+      role: "HR Admin",
+      message:
+        "HR Cloud has made onboarding and payroll management a breeze. I can easily track employee attendance and manage everything from a single platform.",
+      img: "https://randomuser.me/api/portraits/men/1.jpg",
+    },
+    {
+      name: "Jane Smith",
+      role: "Employee",
+      message:
+        "As an employee, HR Cloud has simplified accessing my payslips, tracking leave, and staying on top of my work schedule.",
+      img: "https://randomuser.me/api/portraits/women/2.jpg",
+    },
+    {
+      name: "Michael Brown",
+      role: "HR Admin",
+      message:
+        "The HR Cloud platform has drastically reduced the time spent on administrative tasks. We now have more time to focus on strategic HR initiatives.",
+      img: "https://randomuser.me/api/portraits/men/3.jpg",
+    },
+  ];
   const features = [
     {
       icon: "📋",
@@ -66,6 +90,23 @@ function Home() {
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
+            />
+          ))}
+        </div>
+      </section>
+      {/* Testimonials Section */}
+      <section className="text-center mt-16">
+        <h2 className="text-3xl font-semibold mb-8 text-blue-700">
+          What Our Users Say
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={index}
+              name={testimonial.name}
+              role={testimonial.role}
+              message={testimonial.message}
+              img={testimonial.img}
             />
           ))}
         </div>
