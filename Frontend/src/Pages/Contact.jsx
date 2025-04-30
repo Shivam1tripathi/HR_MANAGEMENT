@@ -1,7 +1,3 @@
-import linkedin from "../assets/linkedin.png";
-import twitter from "../assets/Twitter_logo.png";
-import insta from "../assets/insta-logo.png";
-import facebook from "../assets/facebook-logo.png";
 function Contact() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 space-y-16">
@@ -53,16 +49,32 @@ function Contact() {
       {/* Social Media */}
       <section className="space-x-4 flex justify-center items-center">
         <span className="text-blue-600 font-semibold cursor-pointer">
-          <img src={linkedin} alt="linkedin" width="30px" />
+          <img
+            src="/assets/linkedin.png"
+            className="w-8 hover:w-9"
+            alt="LinkedIn"
+          />
         </span>
         <span className="text-blue-400 font-semibold cursor-pointer">
-          <img src={twitter} alt="twitter" width="30px" />
+          <img
+            src="/assets/Twitter_logo.png"
+            className="w-8 hover:w-9"
+            alt="Twitter"
+          />
         </span>
         <span className="text-pink-600 font-semibold cursor-pointer">
-          <img src={insta} alt="insta" width="40px" />
+          <img
+            src="assets\Insta-Logo.png"
+            className="w-10 hover:w-11"
+            alt="Instagram"
+          />
         </span>
         <span className="text-blue-800 font-semibold cursor-pointer">
-          <img src={facebook} alt="facebook" width="30px" />
+          <img
+            src="/assets/facebook-logo.png"
+            className="w-8 hover:w-9"
+            alt="Facebook"
+          />
         </span>
       </section>
       <section className="text-center">
