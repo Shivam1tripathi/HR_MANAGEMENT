@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import ServiceCard from "../Components/ServiceCard";
 import TestimonialCard from "../Components/TestimonialCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
   const testimonials = [
@@ -25,6 +28,9 @@ function Home() {
       img: "https://randomuser.me/api/portraits/men/3.jpg",
     },
   ];
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   const features = [
     {
       icon: "📋",
@@ -51,11 +57,14 @@ function Home() {
   return (
     <div className="space-y-12">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white text-center py-20">
-        <h1 className="text-4xl font-extrabold leading-tight mb-4">
+      <section
+        className="bg-blue-600 text-white text-center py-20"
+        data-aos="fade-down"
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
           Welcome to HR Cloud - Streamlining HR Operations
         </h1>
-        <p className="text-lg mb-8">
+        <p className="text-lg sm:text-xl md:text-2xl mb-8">
           Manage your employees, attendance, payroll, and more—all in one place.
         </p>
         <a
@@ -68,10 +77,10 @@ function Home() {
 
       {/* Brief Intro to HR Cloud */}
       <section className="px-6 py-12 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
           What is HR Cloud?
         </h2>
-        <p className="text-lg text-center max-w-5xl  mx-auto">
+        <p className="text-lg sm:text-xl md:text-2xl text-center max-w-5xl mx-auto">
           HR Cloud is a web-based Human Resource Management System (HRMS)
           designed to help companies efficiently manage their employees and HR
           operations. From onboarding new hires to managing payroll, HR Cloud
@@ -82,8 +91,14 @@ function Home() {
 
       {/* Services Section */}
       <section className="px-6 py-12">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
+          Our Services
+        </h2>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+          data-aos="fade-up"
+          data-aos-delay={100}
+        >
           {features.map((feature, index) => (
             <ServiceCard
               key={index}
@@ -94,19 +109,20 @@ function Home() {
           ))}
         </div>
       </section>
+
       {/* Testimonials Section */}
       <section className="text-center mt-16">
-        <h2 className="text-3xl font-semibold mb-8 text-blue-700">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-8 text-blue-700">
           What Our Users Say
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map(({ name, role, message, img }, index) => (
             <TestimonialCard
               key={index}
-              name={testimonial.name}
-              role={testimonial.role}
-              message={testimonial.message}
-              img={testimonial.img}
+              name={name}
+              role={role}
+              message={message}
+              img={img}
             />
           ))}
         </div>
